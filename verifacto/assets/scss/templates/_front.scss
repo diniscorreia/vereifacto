@@ -6,10 +6,8 @@
   }
 
   @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
+    background: #f2f2f2;
+    padding: rem-calc(80%) 0;
     margin: 0 0 rem-calc(32);
     height: auto;
     position: relative;
@@ -17,10 +15,8 @@
   }
 
   @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(685);
+    background: #f2f2f2;
+    // height: rem-calc(685);
     margin: 0 0 rem-calc(72);
   }
 
@@ -77,18 +73,16 @@
   }
 
   .tagline {
+    text-align: center;
+
     @include breakpoint(small) {
       @include grid-column(8);
-    }
-
-    @include breakpoint(medium) {
-      @include grid-column(5);
-      padding-top: 6rem;
+      @include grid-column-position(center);
     }
   }
 
   h1 {
-    color: #fff;
+    color: #333;
     font-weight: 500;
 
     @include breakpoint(small) {
@@ -101,7 +95,7 @@
   }
 
   h4 {
-    color: #fefefe;
+    color: #555;
     font-weight: 300;
     font-size: 1.3125rem;
   }
@@ -170,21 +164,22 @@
     }
   }
 
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
+  .section {
     @include breakpoint(small) {
       @include grid-column(12);
     }
 
     @include breakpoint(medium) {
-      @include grid-column(3);
+      @include grid-column(4);
     }
 
     img {
       padding: 1.25rem;
       margin: 1rem auto 0 auto;
+      border-radius: 500px;
+      border: 1px solid #ccc;
+      max-width: 80%;
+
     }
 
     h3 {
@@ -198,9 +193,12 @@
     }
   }
 
-  .why-foundation {
+  .cta {
     @include grid-row();
     @include grid-column(12);
     margin-top: 4rem;
+
+    clear: both;
+    text-align: center;
   }
 }

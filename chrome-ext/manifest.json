@@ -28,7 +28,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "exclude_matches": ["*://verifacto.net/*"],
+      "exclude_matches": ["*://verifacto.net/*", "*://docs.google.com/*"],
       "css": ["css/style.css"],
       "js": [
         "js/vendor/jquery.min.js", 
@@ -36,8 +36,6 @@
         "js/plugins/jquery.highlight.js",
         "js/main.js"
       ]
-      //,
-      //"run_at": "document_end"
     }
   ]
 }

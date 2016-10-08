@@ -1,37 +1,69 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <!--<script src="popup.js"></script>-->
+    <title>Verifacto</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/popup.js"></script>
+    <link href="css/popup.css" rel="stylesheet">
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <div class="container">
+      <header class="popup__header row column">
+        <img src="img/logo.png" align="Verifacto" width="100" height="29" class="popup__logo">
+      </header>
+
+      <main class="popup__content row column">
+        
+        <p>Browse the web as you normally do. Quotes that have been fact-checked will be highlighted. <a tabindex="-1" class="small" href="#">Learn more</a></p>
+
+        <hr>
+
+        <div class="popup__form" id="popup-form">
+          <h5>Request a fact-check</h5>
+
+          <p>Not sure about something you read? We'll look into it and fact-check it for you. Select some text on the page you are browsing - or just add a comment. </p>
+
+          <form>
+            <div class="row">
+              <div class="medium-6 columns">
+                <label>URL
+                  <input type="text" readonly="" id="popup-url" tabindex="-1">
+                </label>
+              </div>
+
+              <div class="medium-6 columns popup__form__comment" id="popup-comment">
+                <label>
+                  Add a comment <small>(optional)</small>
+                  <textarea placeholder="Write a brief description" rows="5"></textarea>
+                </label>
+              </div>
+
+              <div class="medium-6 columns popup__form__selection" id="popup-text">
+                <label>
+                  Selected text
+                  <textarea readonly="" rows="5" tabindex="-1"></textarea>
+                </label>
+              </div>
+
+              <div class="medium-6 columns">
+                <input type="submit" class="button" value="Send" id="popup-submit">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="callout success hide" id="callout-success">
+          <h5>Thank you!</h5>
+          <p>Your suggestion was sent. We'll look into it and fact-check it.</p>
+        </div>
+
+        <div class="callout alert hide" id="callout-alert">
+          <h5>Oops...</h5>
+          <p>There was an error, please try again.</p>
+        </div>
+
+      </main>
+    </div>
   </body>
 </html>
 

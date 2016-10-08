@@ -6,10 +6,10 @@
 
   &__quote {
     transition: background-color ease-in-out 250ms;
-
+ 
     background: #eee !important;
     position: relative;
-    padding: 2px 4px;
+    padding: 0px 4px;
     cursor: pointer;
 
     a:after {
@@ -89,6 +89,7 @@
     line-height: 23px !important;
     font-size: 16px !important;
     color: #444 !important;
+    margin-bottom: 0 !important;
 
     &:hover {
       text-decoration: underline !important;
@@ -100,7 +101,22 @@
     font-weight: normal !important;
     line-height: 20px !important;
     color: #777 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 0 !important;
+   
+  }
+
+  .pblc-vf__popover__icons {
+    display: block !important;
+    margin-bottom: 20px !important;
+    margin-top: 2px !important;
+    line-height: 12px !important;
+
+    img {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
   }
 
   .pblc-vf__popover__title {

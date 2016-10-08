@@ -4434,6 +4434,39 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/assets\/images\/benefict1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 209331,
+		"inputAbbreviatedPath": "\/assets\/images\/benefict1.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/benefict1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/benefict2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123122,
+		"inputAbbreviatedPath": "\/assets\/images\/benefict2.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/benefict2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/benefict3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 133198,
+		"inputAbbreviatedPath": "\/assets\/images\/benefict3.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/benefict3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/icons\/apple-touch-icon-114x114.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4474,6 +4507,17 @@
 		"initialSize": 4328,
 		"inputAbbreviatedPath": "\/assets\/images\/icons\/apple-touch-icon.png",
 		"outputAbbreviatedPath": "\/assets\/images\/icons\/apple-touch-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7164,
+		"inputAbbreviatedPath": "\/assets\/images\/logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

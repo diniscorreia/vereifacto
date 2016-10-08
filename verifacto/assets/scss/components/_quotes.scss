@@ -23,7 +23,51 @@ $score-palette: (
 
   .page-full-width {
     padding-bottom: 3rem;
+
+    .main-content {
+      @include breakpoint(small) {
+        @include grid-column(12);
+      }
+
+      @include breakpoint(medium) {
+        @include grid-column(12); 
+      }
+    }
   }
+
+  
+}
+
+.quote__text {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 62px;
+}
+
+.quote__author,
+.quote__source,
+.quote__dateline {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.quote__dateline {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  opacity: 0.7;
+   font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.quote__author {
+  font-weight: bold;
+}
+
+.quote__source { 
+  opacity: 0.7;
 }
 
 .quote__score {
@@ -45,6 +89,12 @@ $score-palette: (
 .quote__score__tooltip {
   display: inline-block;
   margin-left: 4px;
+}
+
+.quote__text {
+  a {
+    color: #fff !important;
+  }
 }
 
 .i-score {
@@ -114,4 +164,90 @@ $score-palette: (
     background: map-get($score-palette, 1);
     color: #fff;
   }
+
+  a {
+    color: #fff !important;
+  }
+}
+
+.related {
+  border-top: 1px solid #ccc;
+}
+
+.sources {
+  padding-bottom: 3rem;
+}
+
+.slice {
+  a { color: #333; border-bottom: 1px dotted #777; }
+  a:hover { color: #111; border-bottom: 1px solid #777; }
+}
+
+
+
+.taxonomy-images-the-terms {
+  margin: 0;
+  display: block;
+
+  li {
+    margin: 0;
+    display: block;
+    float: none;
+  }
+
+  a {
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    display: block;
+    pointer-events: none;
+    cursor: default;
+    float: none;
+     border-bottom: 0;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 500px;
+  }
+}
+
+.slice__heading span {
+  opacity: 0.4;
+}
+
+.related__list {
+  padding-top: 3rem;
+}
+
+.related__score {
+  margin-top: 36px;
+
+  p {
+    text-transform: uppercase;
+  }
+
+  .stat {
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.quote__source {
+  display: block;
+  font-size: 12px;
+
+  img {
+    width: 12px;
+    margin-right: 6px;
+  }
+}
+
+.has-tip {
+  border-bottom: 0;
 }
