@@ -10,11 +10,12 @@
 
 ?>
 
-		</section>
+		</main>
+		
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<p>VeriFacto • Made by Público</p>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>

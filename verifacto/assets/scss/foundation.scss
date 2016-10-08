@@ -18,8 +18,8 @@
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Third-party libraries
-@import 'font-awesome';
-@import 'motion-ui';
+//@import 'font-awesome';
+//@import 'motion-ui';
 
 // Foundation global styles
 @include foundation-global-styles;
@@ -67,8 +67,8 @@
 // @include foundation-flex-classes;
 
 // Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 /*
   My custom styles:
@@ -86,6 +86,9 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/icons";
+@import "components/quotes";
+@import "components/slices";
 
 // Templates
 @import "templates/front";
@@ -94,3 +97,4 @@
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";
+@import "templates/single-post--quote";

@@ -1,0 +1,117 @@
+$score-palette: (
+  5: #1F6018,
+  4: #839900,
+  3: #EDA30F,
+  2: #D65600,
+  1: #AF0505,
+);
+
+.quote {
+  blockquote,
+  cite,
+  a {
+    color: inherit;
+  }
+
+  cite:before {
+    opacity: 0.5;
+  }
+
+  a {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .page-full-width {
+    padding-bottom: 3rem;
+  }
+}
+
+.quote__score {
+  .i-score5,
+  .i-score4,
+  .i-score3,
+  .i-score2,
+  .i-score1,
+  .quote__score__label {
+    color: #fff !important;
+  }
+}
+
+.quote__score__label {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+}
+
+.quote__score__tooltip {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.i-score {
+  &5 {
+    color: map-get($score-palette, 5);
+
+    + .quote__score__label {
+      color: map-get($score-palette, 5);
+    }
+  }
+
+  &4 {
+    color: map-get($score-palette, 4);
+
+    + .quote__score__label {
+      color: map-get($score-palette, 4);
+    }
+  }
+
+  &3 {
+    color: map-get($score-palette, 3);
+
+    + .quote__score__label {
+      color: map-get($score-palette, 3);
+    }
+  }
+
+  &2 {
+    color: map-get($score-palette, 2);
+
+    + .quote__score__label {
+      color: map-get($score-palette, 2);
+    }
+  }
+
+  &1 {
+    color: map-get($score-palette, 1);
+
+    + .quote__score__label {
+      color: map-get($score-palette, 1);
+    }
+  }
+}
+
+.quote--score {
+  &5 {
+    background: map-get($score-palette, 5);
+    color: #fff;
+  }
+
+  &4 {
+    background: map-get($score-palette, 4);
+    color: #fff;
+  }
+
+  &3 {
+    background: map-get($score-palette, 3);
+    color: #fff;
+  }
+
+  &2 {
+    background: map-get($score-palette, 2);
+    color: #fff;
+  }
+
+  &1 {
+    background: map-get($score-palette, 1);
+    color: #fff;
+  }
+}

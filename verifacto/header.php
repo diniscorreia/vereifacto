@@ -51,5 +51,5 @@
 		</nav>
 	</header>
 
-	<section class="container">
+	<main role="main" class="container">
 		<?php do_action( 'foundationpress_after_header' );
