@@ -7,3 +7,5 @@
 * Wordpress a funcionar no root
 * Labels cena
 * Melhorar get taxonomy image
+* Ícones maiores (https://developer.chrome.com/extensions/manifest/icons)
+* Barra de topo para URL

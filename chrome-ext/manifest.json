@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Verifacto",
+  "description": "A fact-checking tool and platform.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": {
+      "19": "icon19.png",
+      "38": "icon38.png"
+    },
+    "default_title": "Verifacto",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "web_accessible_resources": [
+    "*.woff", 
+    "*.ttf",
+    "icons/*",
+    "img/*",
+    "icons/*.*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["*://verifacto.net/*"],
+      "css": ["css/style.css"],
+      "js": [
+        "js/vendor/jquery.min.js", 
+        "js/plugins/jquery.webui-popover.js",
+        "js/plugins/jquery.highlight.js",
+        "js/main.js"
+      ]
+      //,
+      //"run_at": "document_end"
+    }
+  ]
+}

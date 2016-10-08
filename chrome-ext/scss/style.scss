@@ -1,0 +1,135 @@
+// Namespace
+.pblc-vf {
+  @import "components/icons";
+  @import "components/quotes";
+  @import "components/popover";
+
+  &__quote {
+    transition: background-color ease-in-out 250ms;
+
+    background: #eee !important;
+    position: relative;
+    padding: 2px 4px;
+    cursor: pointer;
+
+    a:after {
+      font-family: "verifacto" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      margin-left: 6px;
+      font-size: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    &--score5 {
+      background-color: rgba(map-get($score-palette, 5), 0.3) !important;
+    
+      a:after {
+         content: "\e001";
+         color: darken(map-get($score-palette, 5), 10%) !important;
+      }
+    }
+
+    &--score4 {
+      background-color: rgba(map-get($score-palette, 4), 0.3) !important;
+
+      a:after {
+         content: "\e004";
+         color: darken(map-get($score-palette, 4), 10%) !important;
+      }
+    }
+
+    &--score3 {
+      background-color: rgba(map-get($score-palette, 3), 0.3) !important;
+
+      a:after {
+         content: "\e003";
+        color: darken(map-get($score-palette, 3), 10%) !important;
+      }
+    }
+
+    &--score2 {
+      background-color: rgba(map-get($score-palette, 2), 0.3) !important;
+
+      a:after {
+         content: "\e002";
+         color: darken(map-get($score-palette, 2), 10%) !important;
+      }
+    }
+
+    &--score1 {
+      background-color: rgba(map-get($score-palette, 1), 0.3) !important;
+      
+
+      a:after {
+        content: "\e000";
+        color: darken(map-get($score-palette, 1), 10%) !important;
+      }
+    }
+
+  }
+
+  .pblc-vf__popover__title,
+  .pblc-vf__popover__context,
+  .pblc-vf__popover__note {
+    display: block !important;
+  }
+
+  .pblc-vf__popover__note {
+    font-weight: normal !important;
+    line-height: 23px !important;
+    font-size: 16px !important;
+    color: #444 !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  .pblc-vf__popover__context {
+    font-size: 14px !important;
+    font-weight: normal !important;
+    line-height: 20px !important;
+    color: #777 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .pblc-vf__popover__title {
+    font-weight: bold !important;
+    font-size: 20px !important;
+    line-height: 29px !important;
+
+    &.score5 {
+         color: darken(map-get($score-palette, 5), 10%) !important;
+    }
+
+    &.score4 {
+         color: darken(map-get($score-palette, 4), 10%) !important;
+      
+    }
+
+    &.score3 {
+        color: darken(map-get($score-palette, 3), 10%) !important;
+      
+    }
+
+    &.score2 {
+         color: darken(map-get($score-palette, 2), 10%) !important;
+      
+    }
+
+    &.score1 {
+      color: darken(map-get($score-palette, 1), 10%) !important;
+    }
+  }
+}
+
