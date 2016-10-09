@@ -121,7 +121,7 @@ $(function(){
             } else if ( factcheckMean >= 3 ) {
               quoteScore = 3;
               quoteScoreLabel = 'Controversial';
-            } else if ( factcheckMean >= 2 ) {
+            } else if ( factcheckMean > 1 ) {
               quoteScore = 2;
               quoteScoreLabel = 'Mostly false';
             } else if ( factcheckMean == 1 ) {

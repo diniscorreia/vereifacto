@@ -43,7 +43,7 @@ if($factchecks) {
 		$score = 4;
 	} else if ( $mean >= 3 ) {
 		$score = 3;
-	} else if ( $mean >= 2 ) {
+	} else if ( $mean > 1 ) {
 		$score = 2;
 	} else if ( $mean == 1 ) {
 		$score = 1;
@@ -52,7 +52,8 @@ if($factchecks) {
 	echo '<!-- SCORE ||| ';
 	echo 'TOTAL FACT CHECKS: '. $number .' ||| ';
 	echo 'SCORE SUM: '. $sum .' |||  ';
-	echo 'SCORE mean: '. $mean .' -->';
+	echo 'SCORE MEAN: '. $mean .' ||| ';
+	echo 'SCORE: '. $score .' --> ';
 }
 
 //Also, get some meta data from the quote, because we'll need it later in the page...
@@ -107,7 +108,7 @@ if($author_factchecks) {
 		$author_score = 4;
 	} else if ( $author_mean >= 3 ) {
 		$author_score = 3;
-	} else if ( $author_mean >= 2 ) {
+	} else if ( $author_mean > 1 ) {
 		$author_score = 2;
 	} else if ( $author_mean == 1 ) {
 		$author_score = 1;
@@ -189,7 +190,7 @@ if($author_factchecks) {
 	<aside class="sources slice">
 		<div class="page-full-width">
 			<div class="main-content">
-				<h3 class="slice__heading">Fact checks</h3>
+				<h3 class="slice__heading">Fact-checks</h3>
 
 				<?php
 				// Print a list of all the fact check link available
@@ -201,7 +202,7 @@ if($author_factchecks) {
 					{
 						$parse = parse_url( get_field('fact_check_link', $factcheck->ID) );
 
-						echo '<li><a href="' . get_field('fact_check_link', $factcheck->ID) . '">' . get_the_title($factcheck->ID) . ' <span aria-haspopup="true" class="quote__score__tooltip has-tip top" data-disable-hover="false" tabindex="1" title="' . $score . '"><span class="i-score' . $score .'"></span></span> <span class="quote__source"><img src="https://www.google.com/s2/favicons?domain=' . $parse['host']  . '" alt="">' . $parse['host']  . '</span></a></li>';
+						echo '<li><a href="' . get_field('fact_check_link', $factcheck->ID) . '">' . get_the_title($factcheck->ID) . ' <span aria-haspopup="true" class="quote__score__tooltip has-tip top" data-disable-hover="false" tabindex="1" title="' . get_field('fact_check_score', $factcheck->ID ) . '"><span class="i-score' . get_field('fact_check_score', $factcheck->ID ) .'"></span></span> <span class="quote__source--credit"><img src="https://www.google.com/s2/favicons?domain=' . $parse['host']  . '" alt="">' . $parse['host']  . '</span></a></li>';
 					}
 
 				echo '</ul>';
@@ -296,7 +297,7 @@ if($author_factchecks) {
 								} else if ( $quote_factchecks_mean >= 3 ) {
 									$quote_factchecks_score = 3;
 									$quote_factchecks_label = 'Controversial';
-								} else if ( $quote_factchecks_mean >= 2 ) {
+								} else if ( $quote_factchecks_mean > 1  ) {
 									$quote_factchecks_score = 2;
 									$quote_factchecks_label = 'Mostly false';
 								} else if ( $quote_factchecks_mean == 1 ) {
